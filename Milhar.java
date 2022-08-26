@@ -8,49 +8,51 @@ public class Milhar {
         numero.setCentena(centena);
         numero.setDezena(dezena);
         numero.setUnidade(unidade);
-        setar(numero, "mil", milhar);
+        setar(numero, "mil ", milhar);
     }
 
     public void setar(Caracteres numero, String escrita, int unidade_atual){
         if (unidade_atual == 1){
-            numero.setnumero_extenso(numero.getnumero_extenso() + "um " + escrita);
+            numero.setnumero_extenso("um " + escrita);
         }else if (unidade_atual == 2) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "dois " + escrita);
+            numero.setnumero_extenso("dois " + escrita);
         }else if (unidade_atual == 3) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "tres " + escrita);
+            numero.setnumero_extenso("tres " + escrita);
         }else if (unidade_atual == 4) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "quatro " + escrita);
+            numero.setnumero_extenso("quatro " + escrita);
         }else if (unidade_atual == 5) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "cinco " + escrita);
+            numero.setnumero_extenso("cinco " + escrita);
         }else if (unidade_atual == 6) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "seis " + escrita);
+            numero.setnumero_extenso("seis " + escrita);
         }else if (unidade_atual == 7) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "sete " + escrita);
+            numero.setnumero_extenso("sete " + escrita);
         }else if (unidade_atual == 8) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "oito " + escrita);
+            numero.setnumero_extenso("oito " + escrita);
         }else if (unidade_atual == 9) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + "nove " + escrita);
+            numero.setnumero_extenso("nove " + escrita);
+        }else{
+            numero.setnumero_extenso("");
         }
     }
     public void setar(Caracteres numero, String[] escrita, int unidade_atual){
         if (unidade_atual == 1){
-            numero.setnumero_extenso(numero.getnumero_extenso() + " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 2) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() +escrita[unidade_atual-1]);
         }else if (unidade_atual == 3) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 4) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 5) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 6) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 7) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 8) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 9) {
-            numero.setnumero_extenso(numero.getnumero_extenso() +  " " + escrita[unidade_atual-1]);
+            numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }
 
     }
