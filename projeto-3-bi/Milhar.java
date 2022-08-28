@@ -34,7 +34,7 @@ public class Milhar {
             numero.setnumero_extenso("");
         }
     }
-    public void setar(Caracteres numero, String[] escrita, int unidade_atual){
+    /*public void setar(Caracteres numero, String[] escrita, int unidade_atual){
         if (unidade_atual == 1){
             numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }else if (unidade_atual == 2) {
@@ -55,5 +55,16 @@ public class Milhar {
             numero.setnumero_extenso(numero.getnumero_extenso() + escrita[unidade_atual-1]);
         }
 
+    }*/
+    public void setar(Caracteres numero, String[] escrita, int unidade_atual){
+        for (int i = 0; i <= unidade_atual; i++) {
+            if (unidade_atual == i && unidade_atual != 0) {
+                numero.setnumero_extenso(numero.getnumero_extenso() + escrita[i - 1]);
+            }else if (unidade_atual == 0 && numero.getNumero() == 0) {
+                numero.setnumero_extenso("zero");
+            }else if (unidade_atual == 0) {
+                numero.setnumero_extenso(numero.getnumero_extenso());
+            }
+        }
     }
 }

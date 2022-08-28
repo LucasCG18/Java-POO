@@ -24,7 +24,7 @@ public class Dezena extends Centena{
                 numero.setnumero_extenso(numero.getnumero_extenso() + "dezenove");
             }
         }else{
-            String[] escrita = new String[]{"dez", "vinte ", "trinta ", "quarenta ", "cinquenta ", "sessenta ", "setenta ", "oitenta ", "noventa "};
+            String[] escrita = new String[]{"dez", "vinte e ", "trinta e ", "quarenta e ", "cinquenta e ", "sessenta e ", "setenta e ", "oitenta e ", "noventa e "};
             setar(numero, escrita, numero.getDezena());
         }
     }
