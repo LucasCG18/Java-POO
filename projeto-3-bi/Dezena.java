@@ -1,28 +1,14 @@
 public class Dezena extends Centena{
     Dezena(Caracteres numero){
         super(numero);
+        if (numero.getCentena() != 0 && numero.getDezena() !=0 || numero.getUnidade() != 0 && numero.getNumero() > 100) {
+            numero.setnumero_extenso(numero.getnumero_extenso() + "e ");
+        }
         if (numero.getDezena() == 1 && numero.getUnidade() == 0){
             numero.setnumero_extenso(numero.getnumero_extenso() + "dez");
         }else if (numero.getDezena() == 1 && numero.getUnidade() != 0){
-            if (numero.getUnidade() == 1){
-                numero.setnumero_extenso(numero.getnumero_extenso() + "onze");
-            }else if (numero.getUnidade() == 2) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "doze");
-            }else if (numero.getUnidade() == 3) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "treze");
-            }else if (numero.getUnidade() == 4) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "quatorse");
-            }else if (numero.getUnidade() == 5) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "quinze");
-            }else if (numero.getUnidade() == 6) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "dezesseis");
-            }else if (numero.getUnidade() == 7) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "dezesete");
-            }else if (numero.getUnidade() == 8) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "dezoito");
-            }else if (numero.getUnidade() == 9) {
-                numero.setnumero_extenso(numero.getnumero_extenso() + "dezenove");
-            }
+            String[] escrita = new String[]{"onze", "doze", "treze", "quatorse ", "quinze ", "dezesseis ", "dezesete ", "dezoito ", "dezenove "};
+            setar(numero, escrita, numero.getDezena());
         }else{
             String[] escrita = new String[]{"dez", "vinte e ", "trinta e ", "quarenta e ", "cinquenta e ", "sessenta e ", "setenta e ", "oitenta e ", "noventa e "};
             setar(numero, escrita, numero.getDezena());
