@@ -1,7 +1,7 @@
 public class Dezena extends Centena{
     Dezena(Caracteres numero){
         super(numero);
-        if (numero.getCentena() != 0 && (numero.getDezena() !=0 || numero.getUnidade() != 0)) {
+        if ((numero.getMilhar() != 0||numero.getCentena() != 0) && (numero.getDezena() !=0 || numero.getUnidade() != 0)) {
             numero.setnumero_extenso(numero.getnumero_extenso() + " e ");
         }
         if (numero.getDezena() == 1 && numero.getUnidade() != 0){
