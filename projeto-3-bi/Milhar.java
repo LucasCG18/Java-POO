@@ -1,5 +1,5 @@
 public class Milhar {
-    Milhar(Caracteres numero){
+    Milhar(Caracteres caracteres, Numero numero){
         String[] escrita = new String[]{"","um mil", "dois mil", "tres mil", "quatro mil", "cinco mil", "seis mil", "sete mil", "oito mil", "nove mil"};
         int milhar = (int) numero.getNumero()/1000;
         int centena = (int) numero.getNumero()/100 - milhar * 10;
@@ -9,10 +9,10 @@ public class Milhar {
         numero.setCentena(centena);
         numero.setDezena(dezena);
         numero.setUnidade(unidade);
-        numero.setnumero_extenso("");
-        setar(numero, escrita[milhar]);
+        caracteres.setnumero_extenso("");
+        setar(caracteres, escrita[milhar]);
     }
-    public void setar(Caracteres numero, String escrita){
-            numero.setnumero_extenso(numero.getnumero_extenso() + escrita);
+    public void setar(Caracteres caracteres, String escrita){
+            caracteres.setnumero_extenso(caracteres.getnumero_extenso() + escrita);
         }
 }

@@ -1,15 +1,15 @@
 public class Dezena extends Centena{
-    Dezena(Caracteres numero){
-        super(numero);
+    Dezena(Caracteres caracteres, Numero numero){
+        super(caracteres, numero);
         if ((numero.getMilhar() != 0||numero.getCentena() != 0) && (numero.getDezena() !=0 || numero.getUnidade() != 0)) {
-            numero.setnumero_extenso(numero.getnumero_extenso() + " e ");
+            caracteres.setnumero_extenso(caracteres.getnumero_extenso() + " e ");
         }
         if (numero.getDezena() == 1 && numero.getUnidade() != 0){
             String[] escrita = new String[]{"","onze", "doze", "treze", "quatorse ", "quinze ", "dezesseis ", "dezesete ", "dezoito ", "dezenove "};
-            setar(numero, escrita[numero.getUnidade()]);
+            setar(caracteres, escrita[numero.getUnidade()]);
         }else{
             String[] escrita = new String[]{"","dez", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
-            setar(numero, escrita[numero.getDezena()]);
+            setar(caracteres, escrita[numero.getDezena()]);
         }
     }
     
